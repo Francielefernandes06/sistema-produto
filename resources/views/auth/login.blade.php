@@ -6,12 +6,12 @@
 
     <div class="container h-100 d-flex justify-content-center align-content-center align-items-center">
         <div class="row justify-content-center">
-            <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <div class="col-md-6 d-flex justify-content-center align-items-center " style="height: 100vh;">
                 
-                <div class="card d-flex justify-content-center align-items-center w-100 ">
+                <div class="card d-flex justify-content-center align-items-center w-100" style="border-radius: 50px;width: 21rem;height: 70%;padding: 1rem;"> 
                     <h1 class="h1">Login</h1>
-                    <div class="card-body w-100">
-                        <form method="POST" action="{{ route('login') }}">
+                    <div class="card-body w-100" style="display: flex;width: 100%;justify-content: center;align-items: center;" >
+                        <form method="POST" action="{{ route('login') }}" style="width: 90%;">
                             @csrf
                 
                             <div>
@@ -39,16 +39,16 @@
                                     </a>
                                 @endif
                 
-                                <x-button class="ml-4">
+                                <button class="ml-4 btn btn-outline-primary">
                                     {{ __('Log in') }}
-                                </x-button>
+                                </button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
     
-            <div class="col-md-6 d-none d-md-block">
+            <div class="col-md-6 " style="height: 100vh;display: flex;">
                 <img src="{{asset('/img/login.png')}}" alt="Image">
             </div>
         </div>
