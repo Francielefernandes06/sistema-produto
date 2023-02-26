@@ -1,22 +1,27 @@
-@extends('layouts.app')
+
+
+<x-app-layout>
+<x-slot name="header">
+    <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        {{ __('View Products') }}
+    </h2>
+</x-slot>
 
 @section('content')
     <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1>Produtos</h1>
-                </div>
-            </div>
+        <div class="container mt-5">
+            
+            
 
             <div class="row">
                 @foreach ($products as $product)
                     <div class="col-md-4 mb-3">
-                        <div class="card">
-                            <img class="card-img-top" src="/images/products/{{ $product->image}}"
-                                alt="{{ $product->title }}">
+                        <div class="card h-100">
+                            <img class="card-img-top" src="/images/products/{{ $product->image }}"
+                            alt="{{ $product->title }}" style="object-fit: cover; height: 250px;">
+
                             <div class="card-body">
-                                <h5 class="card-title">{{ $product->title }}</h5>
+                                <h2 class="h2 card-title">{{ $product->title }}</h2>
                                 <p class="card-text">{{ $product->description }}</p>
                                 <p class="card-text"><small class="text-muted">{{ $product->quantity }} em estoque</small>
                                 </p>
@@ -37,3 +42,4 @@
 
     </section>
 @endsection
+</x-app-layout>

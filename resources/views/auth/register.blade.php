@@ -4,15 +4,16 @@
 
 <section>
 
-    <div class="container">
+    <div class="container h-100 d-flex justify-content-center align-content-center align-items-center">
         <div class="row justify-content-center">
             <div class="col-md-6 d-none d-md-block">
                 <img src="{{asset('/img/login.png')}}" alt="Image">
             </div>
 
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                <div class="card d-flex justify-content-center align-items-center w-100">
+                    <h1 class="h1">Register</h1>
+                    <div class="card-body w-100" >
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
                 
