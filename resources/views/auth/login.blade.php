@@ -4,11 +4,13 @@
 
 <section>
 
-    <div class="container">
+    <div class="container h-100 d-flex justify-content-center align-content-center align-items-center">
         <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                
+                <div class="card d-flex justify-content-center align-items-center w-100 ">
+                    <h1 class="h1">Login</h1>
+                    <div class="card-body w-100">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
                 
@@ -22,11 +24,12 @@
                                 <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
                             </div>
                 
-                            <div class="block mt-4">
+                            <div class="block mt-4 d-flex justify-content-between">
                                 <label for="remember_me" class="flex items-center">
                                     <x-checkbox id="remember_me" name="remember" />
                                     <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
                                 </label>
+                                <a lcass="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{route('register')}}">Don't have an account? Register</a>
                             </div>
                 
                             <div class="flex items-center justify-end mt-4">
