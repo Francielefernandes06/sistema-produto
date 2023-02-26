@@ -6,15 +6,15 @@
 
     <div class="container h-100 d-flex justify-content-center align-content-center align-items-center">
         <div class="row justify-content-center">
-            <div class="col-md-6 d-none d-md-block">
+            <div class="col-md-6 " style="height: 100vh;display: flex;">
                 <img src="{{asset('/img/login.png')}}" alt="Image">
             </div>
 
             <div class="col-md-6 d-flex justify-content-center align-items-center">
-                <div class="card d-flex justify-content-center align-items-center w-100">
+                <div class="card d-flex justify-content-center align-items-center w-100" style="border-radius: 50px;width: 21rem;height: 70%;padding: 1rem;">
                     <h1 class="h1">Register</h1>
-                    <div class="card-body w-100" >
-                        <form method="POST" action="{{ route('register') }}">
+                    <div class="card-body w-100"  style="display: flex;width: 100%;justify-content: center;align-items: center;" >
+                        <form method="POST" action="{{ route('register') }}" style="width: 90%;">
                             @csrf
                 
                             <div>
@@ -55,13 +55,12 @@
                             @endif
                 
                             <div class="flex items-center justify-end mt-4">
-                                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-                                    {{ __('Already registered?') }}
-                                </a>
+                               
+                                <a lcass="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{route('login')}}">Already registered?</a>
                 
-                                <x-button class="ml-4">
+                                <button class="ml-4 btn btn-outline-primary">
                                     {{ __('Register') }}
-                                </x-button>
+                                </button>
                             </div>
                         </form>
                     </div>
