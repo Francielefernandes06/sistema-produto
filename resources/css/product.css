@@ -68,15 +68,16 @@
     padding: 10px 33px;
     text-transform: capitalize;
     font-weight: 700;
+    color: #fff;
     border-radius: 100px;
     box-shadow: 0 10px 20px rgba(0, 204, 0, 0.2);
 }
 
 .btn-edit {
-    background-color: #ffe714;
+    background-color: rgb(202 138 4 / var(--tw-bg-opacity));
 }
 
 .btn-delet {
-    background-color: #ff0000;
+    background-color: rgb(153 27 27 / var(--tw-bg-opacity));
     color: #fff;
 }
