@@ -18,7 +18,7 @@
        <link rel="stylesheet" href="/css/style.css">
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/product.css'])
 
         <!-- Styles -->
         @livewireStyles
@@ -31,8 +31,8 @@
 
             <!-- Page Heading -->
             @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                <header class="bg-cyan-900 shadow">
+                    <div class="max-w-7xl mx-auto text-primary py-6 px-4 sm:px-6 lg:px-8 fs-2 d-flex justify-content-center">
                         {{ $header }}
                     </div>
                 </header>

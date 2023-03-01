@@ -24,7 +24,7 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/product-create', function () {
-        return view('product_create');
+        return view('layout');
     })->name('product-create');
 });
 

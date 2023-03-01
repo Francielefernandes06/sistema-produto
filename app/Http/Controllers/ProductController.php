@@ -15,7 +15,7 @@ class ProductController extends Controller
         $user = auth()->user();
         $products = Product::where('user_id', $user->id)->get();
 
-        return view('produtos.products_index', compact('products'));
+        return view('components.products_index', compact('products'));
     }
 
     public function create()
@@ -33,7 +33,7 @@ class ProductController extends Controller
         ]);
 
         // Tratamento da Imagem
-        
+
         $imageName = time() . '.' . $request->image->extension();
 
         $request->image->move(public_path('images/products'), $imageName);
@@ -89,7 +89,7 @@ class ProductController extends Controller
                 ->with('error', 'You are not authorized to edit this product');
         }
 
-        return view('produtos.product_edit', compact('product'));
+        return view('components.product_edit', compact('product'));
     }
 
     /**
