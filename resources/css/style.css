@@ -9,3 +9,22 @@ body{
     background-color: rgba(42, 81, 123, 0.9);
 }
 
+@media screen and (max-width: 1024px){
+
+    .img-login, .img-register{
+        height: 80%;
+    }
+
+
+
+}
+
+@media screen and (max-width:767px){
+    #content-register{
+        flex-direction: column-reverse;
+    }
+
+}
+
+
+

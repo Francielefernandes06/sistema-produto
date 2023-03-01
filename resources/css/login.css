@@ -1,4 +1,4 @@
-
+/*
 .form-container{
     font-family: 'Poppins', sans-serif;
     max-width:550px;
@@ -20,7 +20,7 @@
 }
 
 .signIn-text a{
-    color: #ff7a00;
+    color: #0051ff9d;
 }
 
 .login-form{
@@ -49,8 +49,8 @@
     margin: 40px auto 0;
     padding: 16px 64px;
     text-transform: capitalize;
-    background-color: #ff7a00;
-    border:2px solid #ff7a00;
+
+    border:2px solid #fff;
     border-radius: 15px;
     color: #fff;
     font-family:inherit;
@@ -68,5 +68,6 @@
 
 .signup-btn:hover{
     background-color: transparent;
-    color: #ff7a00;
-}
+    color: #575554;
+    border:2px solid #2b65e2;
+} */
