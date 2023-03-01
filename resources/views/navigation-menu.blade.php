@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+<nav x-data="{ open: false }" class="bg-dark border-b border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -8,13 +8,15 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link href="{{ route('product-create') }}" :active="request()->routeIs('product-create')">
+                    <x-nav-link class="text-light fs-5"  href="{{ route('product-create') }}" :active="request()->routeIs('product-create')">
                         {{ __('Register Products') }}
                     </x-nav-link>
 
-                    <x-nav-link href="{{ route('products.index') }}" :active="request()->routeIs('products.index')">
+                    <x-nav-link class="text-light fs-5" href="{{ route('products.index') }}" :active="request()->routeIs('products.index')">
                         {{ __('View Products') }}
                     </x-nav-link>
+
+
                 </div>
             </div>
 
@@ -44,6 +46,7 @@
                                     <div class="block px-4 py-2 text-xs text-gray-400">
                                         {{ __('Manage Team') }}
                                     </div>
+                                    
 
                                     <!-- Team Settings -->
                                     <x-dropdown-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}">
