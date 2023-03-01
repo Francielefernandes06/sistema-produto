@@ -45,15 +45,6 @@ class ProductController extends Controller
         $product->title = $request->input('title');
         $product->description = $request->input('description');
         $product->quantity = $request->input('quantity');
-
-        // if($request->hasFile('image') && $request->file('image')->isValid()) {
-        //     $requestImage = $request->image;
-        //     $extension = $requestImage->extension();
-        //     $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
-        //     $requestImage->move(public_path('images/products'), $imageName);
-        //     $product->image = $imageName;
-        // }
-
         $product->image = $imageName;
         $product->user_id = $user->id; // Define o usuário como dono do produto
         $product->save();

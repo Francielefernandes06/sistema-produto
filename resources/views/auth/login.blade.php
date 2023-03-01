@@ -7,23 +7,7 @@
     <div class="container h-100 d-flex justify-content-center align-content-center align-items-center">
         <div class="row justify-content-center align-items-center">
 
-            {{-- <div class="form-container">
-                <h4 class="form-heading">Login</h4></h4>
-                <p class="signIn-text">Don't have an account?
-                  <a href="{{route('register')}}">Register</a></p>
-          <form method="POST" action="{{ route('login') }}" class="login-form">
-
-                @csrf
-            <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" placeholder="Type your e-mail"/>
-
-            <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" placeholder="Type your password"/>
-
-              <button class="signup-btn bg-cyan-800">
-                {{ __('Log in') }}
-            </button>
-          </form>
-            </div> --}}
-
+            
             <div class="col-md-6 d-flex justify-content-center align-items-center " style="height: 100vh;">
 
                 <div class="card d-flex justify-content-center align-items-center w-100" style="border-radius: 50px;width: 21rem;height: 70%;padding: 1rem; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">

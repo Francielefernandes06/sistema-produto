@@ -10,32 +10,7 @@
                 </div>
 
                 <div class="col-md-6 d-flex justify-content-center align-items-center">
-                    {{-- <div class="form-container">
-                        <h4 class="form-heading">Create Account</h4>
-                        <p class="signIn-text">Already Have An Account?
-                            <a href="{{ route('login') }}">Sign In</a>
-                        </p>
-                        <form method="POST" action="{{ route('register') }}" class="login-form">
-                            @csrf
-                            <x-input id="name" class="block mt-1 w-full" type="text" name="name"
-                                :value="old('name')" required autofocus autocomplete="name"
-                                placeholder="Enter your full name " />
-
-                            <x-input id="email" class="block mt-1 w-full" type="email" name="email"
-                                :value="old('email')" required autocomplete="username" placeholder="Type your e-mail" />
-                            <div class="password-inputs">
-                                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required
-                                    autocomplete="new-password" placeholder="Type your password" />
-                                <x-input id="password_confirmation" class="block mt-1 w-full" type="password"
-                                    name="password_confirmation" required autocomplete="new-password"
-                                    placeholder="Confirm your password" />
-                            </div>
-                            <button class="signup-btn bg-cyan-800">
-                                sign up
-                            </button>
-                        </form>
-                    </div> --}}
-
+            
                     <div class="card d-flex justify-content-center align-items-center w-100"
                         style="border-radius: 50px;width: 21rem;padding: 1rem; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);" id="card-register">
                         <h1 class="h1">Register</h1>
