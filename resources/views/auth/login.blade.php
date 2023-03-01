@@ -7,7 +7,7 @@
     <div class="container h-100 d-flex justify-content-center align-content-center align-items-center">
         <div class="row justify-content-center align-items-center">
 
-            
+
             <div class="col-md-6 d-flex justify-content-center align-items-center " style="height: 100vh;">
 
                 <div class="card d-flex justify-content-center align-items-center w-100" style="border-radius: 50px;width: 21rem;height: 70%;padding: 1rem; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
@@ -32,11 +32,11 @@
                             </div>
 
                             <div class="flex items-center justify-end mt-4">
-                                @if (Route::has('password.request'))
+                                {{-- @if (Route::has('password.request'))
                                     <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
                                         {{ __('Forgot your password?') }}
                                     </a>
-                                @endif
+                                @endif --}}
 
                                 <button class="ml-4 inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150 bg-cyan-700">
                                     {{ __('Log in') }}
