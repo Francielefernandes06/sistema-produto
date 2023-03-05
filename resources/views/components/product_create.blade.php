@@ -18,7 +18,7 @@
                                 <label for="title" class="col-md-4 col-form-label text-md-right fs-5">{{ __('Title') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title"  required autofocus>
+                                    <input id="title" type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{old('title')}}" required autofocus>
 
                                     @error('title')
                                         <span class="invalid-feedback" role="alert">
@@ -33,7 +33,7 @@
                                 <label for="description" class="col-md-4 col-form-label text-md-right fs-5 ">{{ __('Description') }}</label>
 
                                 <div class="col-md-6">
-                                    <textarea id="description" class="form-control @error('description') is-invalid @enderror" name="description" required></textarea>
+                                    <textarea id="description" class="form-control @error('description') is-invalid @enderror" name="description" value="{{old('description')}}"required></textarea>
 
                                     @error('description')
                                         <span class="invalid-feedback" role="alert">
@@ -47,7 +47,7 @@
                                 <label for="quantity" class="col-md-4 col-form-label text-md-right fs-5 ">{{ __('Quantity') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="quantity" type="number" class="form-control @error('quantity') is-invalid @enderror" name="quantity" value="" required>
+                                    <input id="quantity" type="number" class="form-control @error('quantity') is-invalid @enderror" name="quantity" value="{{old('quantity')}}" required>
 
                                     @error('quantity')
                                         <span class="invalid-feedback" role="alert">
@@ -61,7 +61,7 @@
                                 <label for="image" class="col-md-4 col-form-label text-md-right fs-5 ">{{ __('Image') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="image" type="file" class="form-control-file @error('image') is-invalid @enderror" name="image">
+                                    <input id="image" type="file" class="form-control-file @error('image') is-invalid @enderror" value="{{old('image')}}"name="image">
 
                                     @error('image')
                                         <span class="invalid-feedback" role="alert">
