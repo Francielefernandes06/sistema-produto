@@ -7,7 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Sistemas de Produtos</title>
-    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">npm
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">

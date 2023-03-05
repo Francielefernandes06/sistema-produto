@@ -17,7 +17,11 @@ return new class extends Migration
             $table->text('description');
             $table->integer('quantity');
             $table->string('image');
-            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+
+            $table->foreignId('user_id')
+            ->constrained('users')
+            ->onDelete('cascade');
+            
             $table->softDeletes();
 
             $table->timestamps();

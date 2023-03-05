@@ -10,10 +10,12 @@ class ProductController extends Controller
 {
 
 
-    public function index()
+    public function index(Request $request)
     {
+        $search= $request->search;
         $user = auth()->user();
-        $products = Product::where('user_id', $user->id)->get();
+        $products = Product::where('user_id', $user->id)->where('title', 'like', '%'.$search.'%')->paginate(5);
+        // $products = Product::where('user_id', $user->id)->get();
 
         return view('components.products_index', compact('products'));
     }
@@ -34,11 +36,11 @@ class ProductController extends Controller
 
         // Tratamento da Imagem
 
-        $imageName = time() . '.' . $request->image->extension();
+        $imageName = time() . '.' . $request->image->extension();// cria o nome do arquivo usando o time e concatenando com a extensaõ do arquivo
 
-        $request->image->move(public_path('images/products'), $imageName);
+        $request->image->move(public_path('images/products'), $imageName); //move a imagem para um diretrio
 
-        $validatedData['image'] = $imageName;
+        $validatedData['image'] = $imageName; //Define o nome da imagem validada na matriz de dados validada para poder ser salva no bd
 
         $user = Auth::user(); // Recupera o usuário autenticado
         $product = new Product();
@@ -99,13 +101,13 @@ class ProductController extends Controller
                 ->with('error', 'Product not found');
         }
 
-        // check if the user is the owner of the product
+        // verifique se o usuário é o proprietário do produto
         if (Auth::user()->id != $product->user_id) {
             return redirect()->route('products.index')
                 ->with('error', 'You are not authorized to edit this product');
         }
 
-        // validate the input data
+        // validar os dados de entrada
         $request->validate([
             'title' => 'required',
             'description' => 'required',
@@ -119,7 +121,7 @@ class ProductController extends Controller
         $product->quantity = $request->input('quantity');
 
         // handle the product image upload
-        if ($request->hasFile('image')) {
+        if ($request->hasFile('image')) { //verifica se a requisição tem um arquivo de imagem com o nome "image" usando o método
             $image = $request->file('image');
             $filename = time() . '_' . $image->getClientOriginalName();
             $path = $image->storeAs('public/images', $filename);
